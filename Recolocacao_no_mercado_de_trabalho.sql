@@ -1,13 +1,11 @@
 create database Recolocacao_no_Mercado_de_Trabalho;
-
-use Recolocacao_no_Mercado_de_Trabalho
-
+use Recolocacao_no_Mercado_de_Trabalho;
 create table curriculos_enviados (
 id INT PRIMARY KEY AUTO_INCREMENT,
 DatadoEnvio DATE, 
 Empresa VARCHAR (100),
 Vaga VARCHAR (100) NOT NULL,
-Salario FLOAT, 
+Salario INT, 
 Beneficios VARCHAR (50),
 Site VARCHAR (30), 
 Escala VARCHAR (5), 
@@ -18,6 +16,7 @@ Resultado VARCHAR (30)
 )
 
 select * from curriculos_enviados;
+
 insert into curriculos_enviados (id, DatadoEnvio, Empresa, Vaga, Site,Retorno, Andamento, Resultado) 
 values (1, '2023/09/02', "SiDi", "Banco de Talentos", "Gupy", "Não", "Em andamento", "Aguardando Retorno");
 select * from curriculos_enviados;
